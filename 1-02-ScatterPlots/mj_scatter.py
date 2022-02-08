@@ -15,7 +15,7 @@ data = [go.Scatter(x=random_x, # note: data is a list
                         symbol='pentagon',
                         line={'width': 2}
                     ))]
-layout = go.Layout(title='Hello First Plot',
+layout = go.Layout(title='Hello First Plot', # layout is not a list!
                     xaxis={'title': 'MY X AXIS'},
                     yaxis=dict(title='MY Y AXIS'), # alternative way of passing dictionary
                     hovermode='closest')
