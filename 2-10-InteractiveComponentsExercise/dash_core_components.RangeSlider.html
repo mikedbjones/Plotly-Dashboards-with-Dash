@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: class RangeSlider</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><strong>dash_core_components.RangeSlider</strong> = <a name="dash_core_components.RangeSlider">class RangeSlider</a>(<a href="dash.development.base_component.html#Component">dash.development.base_component.Component</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>A&nbsp;RangeSlider&nbsp;component.<br>
+A&nbsp;double&nbsp;slider&nbsp;with&nbsp;two&nbsp;handles.<br>
+Used&nbsp;for&nbsp;specifying&nbsp;a&nbsp;range&nbsp;of&nbsp;numerical&nbsp;values.<br>
+&nbsp;<br>
+Keyword&nbsp;arguments:<br>
+-&nbsp;id&nbsp;(string;&nbsp;optional)<br>
+-&nbsp;marks&nbsp;(optional):&nbsp;Marks&nbsp;on&nbsp;the&nbsp;slider.<br>
+The&nbsp;key&nbsp;determines&nbsp;the&nbsp;position,<br>
+and&nbsp;the&nbsp;value&nbsp;determines&nbsp;what&nbsp;will&nbsp;show.<br>
+If&nbsp;you&nbsp;want&nbsp;to&nbsp;set&nbsp;the&nbsp;style&nbsp;of&nbsp;a&nbsp;specific&nbsp;mark&nbsp;point,<br>
+the&nbsp;value&nbsp;should&nbsp;be&nbsp;an&nbsp;object&nbsp;which<br>
+contains&nbsp;style&nbsp;and&nbsp;label&nbsp;properties..&nbsp;marks&nbsp;has&nbsp;the&nbsp;following&nbsp;type:&nbsp;dict&nbsp;containing&nbsp;keys&nbsp;'number'.<br>
+Those&nbsp;keys&nbsp;have&nbsp;the&nbsp;following&nbsp;types:&nbsp;<br>
+&nbsp;&nbsp;-&nbsp;number&nbsp;(optional):&nbsp;.&nbsp;number&nbsp;has&nbsp;the&nbsp;following&nbsp;type:&nbsp;string&nbsp;|&nbsp;dict&nbsp;containing&nbsp;keys&nbsp;'style',&nbsp;'label'.<br>
+Those&nbsp;keys&nbsp;have&nbsp;the&nbsp;following&nbsp;types:&nbsp;<br>
+&nbsp;&nbsp;-&nbsp;style&nbsp;(dict;&nbsp;optional)<br>
+&nbsp;&nbsp;-&nbsp;label&nbsp;(string;&nbsp;optional)<br>
+-&nbsp;value&nbsp;(list;&nbsp;optional):&nbsp;The&nbsp;value&nbsp;of&nbsp;the&nbsp;input<br>
+-&nbsp;allowCross&nbsp;(boolean;&nbsp;optional):&nbsp;allowCross&nbsp;could&nbsp;be&nbsp;set&nbsp;as&nbsp;true&nbsp;to&nbsp;allow&nbsp;those&nbsp;handles&nbsp;to&nbsp;cross.<br>
+-&nbsp;className&nbsp;(string;&nbsp;optional):&nbsp;Additional&nbsp;CSS&nbsp;class&nbsp;for&nbsp;the&nbsp;root&nbsp;DOM&nbsp;node<br>
+-&nbsp;count&nbsp;(number;&nbsp;optional):&nbsp;Determine&nbsp;how&nbsp;many&nbsp;ranges&nbsp;to&nbsp;render,&nbsp;and&nbsp;multiple&nbsp;handles<br>
+will&nbsp;be&nbsp;rendered&nbsp;(number&nbsp;+&nbsp;1).<br>
+-&nbsp;disabled&nbsp;(boolean;&nbsp;optional):&nbsp;If&nbsp;true,&nbsp;the&nbsp;handles&nbsp;can't&nbsp;be&nbsp;moved.<br>
+-&nbsp;dots&nbsp;(boolean;&nbsp;optional):&nbsp;When&nbsp;the&nbsp;step&nbsp;value&nbsp;is&nbsp;greater&nbsp;than&nbsp;1,<br>
+you&nbsp;can&nbsp;set&nbsp;the&nbsp;dots&nbsp;to&nbsp;true&nbsp;if&nbsp;you&nbsp;want&nbsp;to<br>
+render&nbsp;the&nbsp;slider&nbsp;with&nbsp;dots.<br>
+-&nbsp;included&nbsp;(boolean;&nbsp;optional):&nbsp;If&nbsp;the&nbsp;value&nbsp;is&nbsp;true,&nbsp;it&nbsp;means&nbsp;a&nbsp;continuous<br>
+value&nbsp;is&nbsp;included.&nbsp;Otherwise,&nbsp;it&nbsp;is&nbsp;an&nbsp;independent&nbsp;value.<br>
+-&nbsp;min&nbsp;(number;&nbsp;optional):&nbsp;Minimum&nbsp;allowed&nbsp;value&nbsp;of&nbsp;the&nbsp;slider<br>
+-&nbsp;max&nbsp;(number;&nbsp;optional):&nbsp;Maximum&nbsp;allowed&nbsp;value&nbsp;of&nbsp;the&nbsp;slider<br>
+-&nbsp;pushable&nbsp;(boolean&nbsp;|&nbsp;number;&nbsp;optional):&nbsp;pushable&nbsp;could&nbsp;be&nbsp;set&nbsp;as&nbsp;true&nbsp;to&nbsp;allow&nbsp;pushing&nbsp;of<br>
+surrounding&nbsp;handles&nbsp;when&nbsp;moving&nbsp;an&nbsp;handle.<br>
+When&nbsp;set&nbsp;to&nbsp;a&nbsp;number,&nbsp;the&nbsp;number&nbsp;will&nbsp;be&nbsp;the<br>
+minimum&nbsp;ensured&nbsp;distance&nbsp;between&nbsp;handles.<br>
+-&nbsp;step&nbsp;(number;&nbsp;optional):&nbsp;Value&nbsp;by&nbsp;which&nbsp;increments&nbsp;or&nbsp;decrements&nbsp;are&nbsp;made<br>
+-&nbsp;vertical&nbsp;(boolean;&nbsp;optional):&nbsp;If&nbsp;true,&nbsp;the&nbsp;slider&nbsp;will&nbsp;be&nbsp;vertical<br>
+-&nbsp;updatemode&nbsp;(a&nbsp;value&nbsp;equal&nbsp;to:&nbsp;'mouseup',&nbsp;'drag';&nbsp;optional):&nbsp;Determines&nbsp;when&nbsp;the&nbsp;component&nbsp;should&nbsp;update<br>
+its&nbsp;value.&nbsp;If&nbsp;`mouseup`,&nbsp;then&nbsp;the&nbsp;slider<br>
+will&nbsp;only&nbsp;trigger&nbsp;its&nbsp;value&nbsp;when&nbsp;the&nbsp;user&nbsp;has<br>
+finished&nbsp;dragging&nbsp;the&nbsp;slider.&nbsp;If&nbsp;`drag`,&nbsp;then<br>
+the&nbsp;slider&nbsp;will&nbsp;update&nbsp;its&nbsp;value&nbsp;continuously<br>
+as&nbsp;it&nbsp;is&nbsp;being&nbsp;dragged.<br>
+Only&nbsp;use&nbsp;`drag`&nbsp;if&nbsp;your&nbsp;updates&nbsp;are&nbsp;fast.<br>
+&nbsp;<br>
+Available&nbsp;events:&nbsp;'change'<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd>RangeSlider</dd>
+<dd><a href="dash.development.base_component.html#Component">dash.development.base_component.Component</a></dd>
+<dd><a href="collections.abc.html#MutableMapping">collections.abc.MutableMapping</a></dd>
+<dd><a href="collections.abc.html#Mapping">collections.abc.Mapping</a></dd>
+<dd><a href="collections.abc.html#Collection">collections.abc.Collection</a></dd>
+<dd><a href="collections.abc.html#Sized">collections.abc.Sized</a></dd>
+<dd><a href="collections.abc.html#Iterable">collections.abc.Iterable</a></dd>
+<dd><a href="collections.abc.html#Container">collections.abc.Container</a></dd>
+<dd><a href="builtins.html#object">object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="RangeSlider-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt></dl>
+
+<dl><dt><a name="RangeSlider-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__abstractmethods__</strong> = frozenset()</dl>
+
+<hr>
+Methods inherited from <a href="dash.development.base_component.html#Component">dash.development.base_component.Component</a>:<br>
+<dl><dt><a name="RangeSlider-__delitem__"><strong>__delitem__</strong></a>(self, id)</dt><dd><tt>Delete&nbsp;items&nbsp;by&nbsp;ID&nbsp;in&nbsp;the&nbsp;tree&nbsp;of&nbsp;children.</tt></dd></dl>
+
+<dl><dt><a name="RangeSlider-__getitem__"><strong>__getitem__</strong></a>(self, id)</dt><dd><tt>Recursively&nbsp;find&nbsp;the&nbsp;element&nbsp;with&nbsp;the&nbsp;given&nbsp;ID&nbsp;through&nbsp;the&nbsp;tree<br>
+of&nbsp;children.</tt></dd></dl>
+
+<dl><dt><a name="RangeSlider-__iter__"><strong>__iter__</strong></a>(self)</dt><dd><tt>Yield&nbsp;IDs&nbsp;in&nbsp;the&nbsp;tree&nbsp;of&nbsp;children.</tt></dd></dl>
+
+<dl><dt><a name="RangeSlider-__len__"><strong>__len__</strong></a>(self)</dt><dd><tt>Return&nbsp;the&nbsp;number&nbsp;of&nbsp;items&nbsp;in&nbsp;the&nbsp;tree.</tt></dd></dl>
+
+<dl><dt><a name="RangeSlider-__setitem__"><strong>__setitem__</strong></a>(self, id, item)</dt><dd><tt>Set&nbsp;an&nbsp;element&nbsp;by&nbsp;its&nbsp;ID.</tt></dd></dl>
+
+<dl><dt><a name="RangeSlider-to_plotly_json"><strong>to_plotly_json</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="RangeSlider-traverse"><strong>traverse</strong></a>(self)</dt><dd><tt>Yield&nbsp;each&nbsp;item&nbsp;in&nbsp;the&nbsp;tree.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="dash.development.base_component.html#Component">dash.development.base_component.Component</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Methods inherited from <a href="collections.abc.html#MutableMapping">collections.abc.MutableMapping</a>:<br>
+<dl><dt><a name="RangeSlider-clear"><strong>clear</strong></a>(self)</dt><dd><tt>D.<a href="#dash_core_components.RangeSlider-clear">clear</a>()&nbsp;-&gt;&nbsp;None.&nbsp;&nbsp;Remove&nbsp;all&nbsp;items&nbsp;from&nbsp;D.</tt></dd></dl>
+
+<dl><dt><a name="RangeSlider-pop"><strong>pop</strong></a>(self, key, default=&lt;object object at 0x000001CAD542C050&gt;)</dt><dd><tt>D.<a href="#dash_core_components.RangeSlider-pop">pop</a>(k[,d])&nbsp;-&gt;&nbsp;v,&nbsp;remove&nbsp;specified&nbsp;key&nbsp;and&nbsp;return&nbsp;the&nbsp;corresponding&nbsp;value.<br>
+If&nbsp;key&nbsp;is&nbsp;not&nbsp;found,&nbsp;d&nbsp;is&nbsp;returned&nbsp;if&nbsp;given,&nbsp;otherwise&nbsp;KeyError&nbsp;is&nbsp;raised.</tt></dd></dl>
+
+<dl><dt><a name="RangeSlider-popitem"><strong>popitem</strong></a>(self)</dt><dd><tt>D.<a href="#dash_core_components.RangeSlider-popitem">popitem</a>()&nbsp;-&gt;&nbsp;(k,&nbsp;v),&nbsp;remove&nbsp;and&nbsp;return&nbsp;some&nbsp;(key,&nbsp;value)&nbsp;pair<br>
+as&nbsp;a&nbsp;2-tuple;&nbsp;but&nbsp;raise&nbsp;KeyError&nbsp;if&nbsp;D&nbsp;is&nbsp;empty.</tt></dd></dl>
+
+<dl><dt><a name="RangeSlider-setdefault"><strong>setdefault</strong></a>(self, key, default=None)</dt><dd><tt>D.<a href="#dash_core_components.RangeSlider-setdefault">setdefault</a>(k[,d])&nbsp;-&gt;&nbsp;D.<a href="#dash_core_components.RangeSlider-get">get</a>(k,d),&nbsp;also&nbsp;set&nbsp;D[k]=d&nbsp;if&nbsp;k&nbsp;not&nbsp;in&nbsp;D</tt></dd></dl>
+
+<dl><dt><a name="RangeSlider-update"><strong>update</strong></a>(*args, **kwds)</dt><dd><tt>D.<a href="#dash_core_components.RangeSlider-update">update</a>([E,&nbsp;]**F)&nbsp;-&gt;&nbsp;None.&nbsp;&nbsp;Update&nbsp;D&nbsp;from&nbsp;mapping/iterable&nbsp;E&nbsp;and&nbsp;F.<br>
+If&nbsp;E&nbsp;present&nbsp;and&nbsp;has&nbsp;a&nbsp;.<a href="#dash_core_components.RangeSlider-keys">keys</a>()&nbsp;method,&nbsp;does:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;k&nbsp;in&nbsp;E:&nbsp;D[k]&nbsp;=&nbsp;E[k]<br>
+If&nbsp;E&nbsp;present&nbsp;and&nbsp;lacks&nbsp;.<a href="#dash_core_components.RangeSlider-keys">keys</a>()&nbsp;method,&nbsp;does:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;(k,&nbsp;v)&nbsp;in&nbsp;E:&nbsp;D[k]&nbsp;=&nbsp;v<br>
+In&nbsp;either&nbsp;case,&nbsp;this&nbsp;is&nbsp;followed&nbsp;by:&nbsp;for&nbsp;k,&nbsp;v&nbsp;in&nbsp;F.<a href="#dash_core_components.RangeSlider-items">items</a>():&nbsp;D[k]&nbsp;=&nbsp;v</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="collections.abc.html#Mapping">collections.abc.Mapping</a>:<br>
+<dl><dt><a name="RangeSlider-__contains__"><strong>__contains__</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="RangeSlider-__eq__"><strong>__eq__</strong></a>(self, other)</dt><dd><tt>Return&nbsp;self==value.</tt></dd></dl>
+
+<dl><dt><a name="RangeSlider-get"><strong>get</strong></a>(self, key, default=None)</dt><dd><tt>D.<a href="#dash_core_components.RangeSlider-get">get</a>(k[,d])&nbsp;-&gt;&nbsp;D[k]&nbsp;if&nbsp;k&nbsp;in&nbsp;D,&nbsp;else&nbsp;d.&nbsp;&nbsp;d&nbsp;defaults&nbsp;to&nbsp;None.</tt></dd></dl>
+
+<dl><dt><a name="RangeSlider-items"><strong>items</strong></a>(self)</dt><dd><tt>D.<a href="#dash_core_components.RangeSlider-items">items</a>()&nbsp;-&gt;&nbsp;a&nbsp;set-like&nbsp;object&nbsp;providing&nbsp;a&nbsp;view&nbsp;on&nbsp;D's&nbsp;items</tt></dd></dl>
+
+<dl><dt><a name="RangeSlider-keys"><strong>keys</strong></a>(self)</dt><dd><tt>D.<a href="#dash_core_components.RangeSlider-keys">keys</a>()&nbsp;-&gt;&nbsp;a&nbsp;set-like&nbsp;object&nbsp;providing&nbsp;a&nbsp;view&nbsp;on&nbsp;D's&nbsp;keys</tt></dd></dl>
+
+<dl><dt><a name="RangeSlider-values"><strong>values</strong></a>(self)</dt><dd><tt>D.<a href="#dash_core_components.RangeSlider-values">values</a>()&nbsp;-&gt;&nbsp;an&nbsp;object&nbsp;providing&nbsp;a&nbsp;view&nbsp;on&nbsp;D's&nbsp;values</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="collections.abc.html#Mapping">collections.abc.Mapping</a>:<br>
+<dl><dt><strong>__hash__</strong> = None</dl>
+
+<dl><dt><strong>__reversed__</strong> = None</dl>
+
+<hr>
+Class methods inherited from <a href="collections.abc.html#Collection">collections.abc.Collection</a>:<br>
+<dl><dt><a name="RangeSlider-__subclasshook__"><strong>__subclasshook__</strong></a>(C)<font color="#909090"><font face="helvetica, arial"> from <a href="abc.html#ABCMeta">abc.ABCMeta</a></font></font></dt><dd><tt>Abstract&nbsp;classes&nbsp;can&nbsp;override&nbsp;this&nbsp;to&nbsp;customize&nbsp;issubclass().<br>
+&nbsp;<br>
+This&nbsp;is&nbsp;invoked&nbsp;early&nbsp;on&nbsp;by&nbsp;abc.ABCMeta.__subclasscheck__().<br>
+It&nbsp;should&nbsp;return&nbsp;True,&nbsp;False&nbsp;or&nbsp;NotImplemented.&nbsp;&nbsp;If&nbsp;it&nbsp;returns<br>
+NotImplemented,&nbsp;the&nbsp;normal&nbsp;algorithm&nbsp;is&nbsp;used.&nbsp;&nbsp;Otherwise,&nbsp;it<br>
+overrides&nbsp;the&nbsp;normal&nbsp;algorithm&nbsp;(and&nbsp;the&nbsp;outcome&nbsp;is&nbsp;cached).</tt></dd></dl>
+
+</td></tr></table>
+</body></html>
